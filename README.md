@@ -1,4 +1,4 @@
-# Monty Hall Paradox Code Assignment Qliro 
+# Monty Hall Paradox Code Assignment Qliro 🧠 🏄‍♂️
 
 Step right up to the Monty Hall Paradox code assignment repository! Get ready to put your full-stack development skills to the test with this exciting project.
 
