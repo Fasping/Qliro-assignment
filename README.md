@@ -1,21 +1,46 @@
-# Monty Hall Paradox Code Assignment Qliro 🧠 🏄‍♂️
+<h2 align="center">
+  Monty Hall problem
+</h2>
 
-Step right up to the Monty Hall Paradox code assignment repository! Get ready to put your full-stack development skills to the test with this exciting project.
+The Monty Hall problem is a brain teaser, in the form of a probability puzzle, loosely based on the American television game show Let's Make a Deal and named after its original host, Monty Hall [(learn more)](https://en.m.wikipedia.org/wiki/Monty_Hall_problem).
 
-## Features
-- React js front-end for user interface
-- C# or Node.js back-end for game simulation
-- Input number of simulations to run
-- Display results on front-end after simulation is complete
-- Professional, efficient, and fully tested solution
+## Setup
 
-## How to Use
-1. Clone this repository to your local machine
-2. Navigate to the repository directory in your terminal
-3. Install required dependencies by running `npm install` or `yarn install`
-4. Start the application by running `npm start` or `yarn start`
-5. Input the number of simulations and decide whether to stick with your original choice or switch doors
-6. Press the button to start the simulation
-7. See the results of the simulations displayed on the front-end
+Clone the repository and run `npm install`.
 
-Let's see if you've got what it takes to beat the odds in this classic game brought to life with cutting-edge full-stack development!
+## Development
+
+- `Terminal #1` - run React frontend `npm run start` => [`localhost:3000`](http://localhost:3000)
+- `Terminal #2` - run express backend `npm run server` => [`localhost:3100`](http://localhost:3100)
+
+## Production
+
+Run `npm run monty-app` builds the React frontend and serves it via express using static middleware at [`localhost:3100`](http://localhost:3100).
+
+## Backend API
+
+The [express](https://expressjs.com/) backend responds to POST request at [`localhost:3100/api/monty`](http://localhost:3100/api/monty).
+
+### Request body
+
+```
+{
+  "sampleSize":<Integer>,
+  "keep":<Boolean>,
+  "numberOfDoors":<Integer>
+}
+```
+
+### Response body
+
+```
+{
+  "sampleSize": <Integer>,
+  "wins": <Integer>,
+  "keep": <Boolean>,
+  "numberOfDoors": <Integer>,
+  "winRate": <Float>
+}
+```
+
+While in production the build React app is served from the same port as the backend; in order to cancel this feature it run `rm -rf build` in app root folder.
