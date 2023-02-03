@@ -1,3 +1,24 @@
 .App {
-  text-align: center;
+  width: 50vw;
+  background: transparent;
+}
+
+.StrategySelection {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.Output {
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 300px) and (max-width: 800px) {
+  .App {
+    width: 98%;
+  }
 }
