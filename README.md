@@ -10,4 +10,4 @@ Clone the repository and run `npm install`.
 
 ## Production
 
-Run `npm run monty-app` builds the React frontend and serves it via express using static middleware at [`localhost:3100`](http://localhost:3100).
+Run `npm run monty-app` builds the React frontend and serves it via express using static middleware at [`localhost:3100`](http://localhost:3000).
