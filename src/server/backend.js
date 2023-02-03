@@ -6,7 +6,7 @@ const monty = require("./monty.js");
 const app = express();
 
 // Define the port for the app to run on
-const PORT = 3100;
+const PORT = 3000;
 // Define the build path for serving the client app
 const BUILD = "/../../build";
 
@@ -37,6 +37,6 @@ app.get("/", function (req, res) {
 // Start the app on the defined port and log a message to the console
 app.listen(PORT, () => {
   console.log(`
-Monty Hall problem backend listening at http://localhost:${PORT}
+Monty Hall Game listening at http://localhost:${PORT}
 `);
 });
