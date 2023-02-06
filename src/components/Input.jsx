@@ -17,9 +17,9 @@ const InputContainer = styled.div`
   text-align: center;
 `;
 
-const Input = (props) => {
+const Input = ({ initial, cbSampleSize }) => {
   // eslint-disable-next-line no-unused-vars
-  const [sampleSize, setSampleSize] = useState(props.initial);
+  const [sampleSize, setSampleSize] = useState(initial);
 
   return (
     <InputContainer>
@@ -28,7 +28,7 @@ const Input = (props) => {
         placeholder={"Sample size"}
         onChange={(event) => {
           setSampleSize(event.target.value);
-          props.cbSampleSize(event.target.value);
+          cbSampleSize(event.target.value);
         }}
       ></StyledInput>
     </InputContainer>

@@ -19,11 +19,11 @@ const FrameTitle = styled.p`
   margin-bottom: -25px;
 `;
 
-const Frame = (props) => {
+const Frame = ({ show, title, children }) => {
   return (
-    <StyledFrame show={props.show}>
-      <FrameTitle>{props.title}</FrameTitle>
-      {props.children}
+    <StyledFrame show={show}>
+      <FrameTitle>{title}</FrameTitle>
+      {children}
     </StyledFrame>
   );
 };
