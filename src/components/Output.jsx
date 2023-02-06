@@ -6,17 +6,17 @@ const StyledOutput = styled.div`
   line-height: 1em;
 `;
 
-const Output = (props) => {
+const Output = ({ simulation }) => {
   return (
     <StyledOutput>
-      <p>Sample size: {props.simulation.sampleSize}</p>
+      <p>Sample size: {simulation.sampleSize}</p>
       <p>
-        Wins: {props.simulation.wins}/{props.simulation.sampleSize}
+        Wins: {simulation.wins}/{simulation.sampleSize}
       </p>
-      <p>Probability of winning: P={props.simulation.winRate}</p>
+      <p>Probability of winning: P={simulation.winRate}</p>
       <p>
         Strategy:{" "}
-        {props.simulation.keep
+        {simulation.keep
           ? "keeping the initial decision (KEEP)"
           : "changing the decision (CHANGE)"}
       </p>
