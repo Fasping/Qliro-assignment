@@ -18,6 +18,7 @@ const InputContainer = styled.div`
 `;
 
 const Input = (props) => {
+  // eslint-disable-next-line no-unused-vars
   const [sampleSize, setSampleSize] = useState(props.initial);
 
   return (
