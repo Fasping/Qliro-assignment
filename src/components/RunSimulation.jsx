@@ -7,14 +7,12 @@ const ButtonContainer = styled.div`
   text-align: center;
 `;
 
-const RunSimulation = (props) => {
+const RunSimulation = ({ simulate, sampleSize, keep, numberOfDoors }) => {
   return (
     <ButtonContainer>
       <StyledButton
         className="Button"
-        onClick={() =>
-          props.simulate(props.sampleSize, props.keep, props.numberOfDoors)
-        }
+        onClick={() => simulate(sampleSize, keep, numberOfDoors)}
       >
         Run simulation
       </StyledButton>
