@@ -12,14 +12,14 @@ const StyledButton = styled.button`
   }
 `;
 
-const StrategyToggle = (props) => {
-  const [toggle, setToggle] = useState(props.keep);
+const StrategyToggle = ({ cbSetKeep, keep }) => {
+  const [toggle, setToggle] = useState(keep);
 
   return (
     <div className="StrategySelection">
       <StyledButton
         onClick={() => {
-          props.cbSetKeep(true);
+          cbSetKeep(true);
           setToggle(!toggle);
         }}
         toggle={toggle}
@@ -29,7 +29,7 @@ const StrategyToggle = (props) => {
       </StyledButton>
       <StyledButton
         onClick={() => {
-          props.cbSetKeep(false);
+          cbSetKeep(false);
           setToggle(!toggle);
         }}
         toggle={!toggle}
